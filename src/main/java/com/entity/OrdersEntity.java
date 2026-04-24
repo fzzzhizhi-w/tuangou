@@ -1,0 +1,78 @@
+package com.entity;
+
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+import java.io.Serializable;
+import java.util.Date;
+
+@TableName("orders")
+public class OrdersEntity implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    @TableId
+    private Long id;
+    private String orderid;
+    private String tablename;
+    private Long userid;
+    private Long goodid;
+    private String goodname;
+    private String picture;
+    private Integer buynumber;
+    private Double price;
+    private Double discountprice;
+    private Double total;
+    private Double discounttotal;
+    private Integer type;
+    private String status;
+    private String address;
+    private String tel;
+    private String consignee;
+    private String logistics;
+    private String remark;
+    @JsonFormat(locale = "zh", timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
+    @DateTimeFormat
+    private Date addtime;
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public String getOrderid() { return orderid; }
+    public void setOrderid(String orderid) { this.orderid = orderid; }
+    public String getTablename() { return tablename; }
+    public void setTablename(String tablename) { this.tablename = tablename; }
+    public Long getUserid() { return userid; }
+    public void setUserid(Long userid) { this.userid = userid; }
+    public Long getGoodid() { return goodid; }
+    public void setGoodid(Long goodid) { this.goodid = goodid; }
+    public String getGoodname() { return goodname; }
+    public void setGoodname(String goodname) { this.goodname = goodname; }
+    public String getPicture() { return picture; }
+    public void setPicture(String picture) { this.picture = picture; }
+    public Integer getBuynumber() { return buynumber; }
+    public void setBuynumber(Integer buynumber) { this.buynumber = buynumber; }
+    public Double getPrice() { return price; }
+    public void setPrice(Double price) { this.price = price; }
+    public Double getDiscountprice() { return discountprice; }
+    public void setDiscountprice(Double discountprice) { this.discountprice = discountprice; }
+    public Double getTotal() { return total; }
+    public void setTotal(Double total) { this.total = total; }
+    public Double getDiscounttotal() { return discounttotal; }
+    public void setDiscounttotal(Double discounttotal) { this.discounttotal = discounttotal; }
+    public Integer getType() { return type; }
+    public void setType(Integer type) { this.type = type; }
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
+    public String getAddress() { return address; }
+    public void setAddress(String address) { this.address = address; }
+    public String getTel() { return tel; }
+    public void setTel(String tel) { this.tel = tel; }
+    public String getConsignee() { return consignee; }
+    public void setConsignee(String consignee) { this.consignee = consignee; }
+    public String getLogistics() { return logistics; }
+    public void setLogistics(String logistics) { this.logistics = logistics; }
+    public String getRemark() { return remark; }
+    public void setRemark(String remark) { this.remark = remark; }
+    public Date getAddtime() { return addtime; }
+    public void setAddtime(Date addtime) { this.addtime = addtime; }
+}
