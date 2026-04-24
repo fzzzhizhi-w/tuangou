@@ -25,7 +25,7 @@ public class ShangpinxinxiController {
         String role = (String) request.getSession().getAttribute("role");
         if ("商家".equals(role)) {
             Long userId = (Long) request.getSession().getAttribute("userId");
-            // Get shangjia info from session
+            ew.eq("shangpubianhao", userId);
         }
         if (entity.getShangpinmingcheng() != null && !entity.getShangpinmingcheng().isEmpty()) {
             ew.like("shangpinmingcheng", entity.getShangpinmingcheng());
